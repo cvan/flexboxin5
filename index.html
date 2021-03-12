@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/build/style.css">
+    <style>pre { font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace; }</style>
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans" rel='stylesheet' type='text/css'>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script type="text/javascript" charset="utf-8" src="js/lib/modernizr.js"></script>
@@ -129,37 +130,33 @@
     </div>
 
 
-    <div class="code-box">
-        <span class="cb-title">code samples</span>
-
+    <div class="code-box" onClick="window.getSelection().selectAllChildren(this)" >
         <div class="cb-item">
             <code>
                     <pre>
-
 .flex-container {
-    display:flex;
-    flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>;
-    flex-wrap: <span data-bind="text:cPropsCurrent.flexWrap"></span>;
-    justify-content: <span data-bind="text:cPropsCurrent.justifyContent"></span>;
-    align-content: <span data-bind="text:cPropsCurrent.alignContent"></span>;
-    align-items: <span data-bind="text:cPropsCurrent.alignItems"></span>;
+  display: flex;
+  flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>;
+  flex-wrap: <span data-bind="text:cPropsCurrent.flexWrap"></span>;
+  justify-content: <span data-bind="text:cPropsCurrent.justifyContent"></span>;
+  align-content: <span data-bind="text:cPropsCurrent.alignContent"></span>;
+  align-items: <span data-bind="text:cPropsCurrent.alignItems"></span>;
 }
-    </pre>
+</pre>
 
             </code>
         </div>
         <div class="cb-item">
             <code>
     <pre>
-
 .flex-items-default {
-    width: <span data-bind="text:iPropsDefault.width">null</span>;
-    height: <span data-bind="text:iPropsDefault.height">null</span>;
-    flex-grow: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
-    flex-shrink: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
-    flex-basis: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
+  width: <span data-bind="text:iPropsDefault.width">null</span>;
+  height: <span data-bind="text:iPropsDefault.height">null</span>;
+  flex-grow: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
+  flex-shrink: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
+  flex-basis: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
 }
-    </pre>
+</pre>
             </code>
         </div>
         <div class="code-box-items" data-bind="template: { name: 'code-box-items', foreach: items, as:'item' }">
@@ -221,23 +218,23 @@
         <code>
   <pre>
 .flex-item-<span data-bind="text:item.index"></span> {
-    width: <span
+  width: <span
             data-bind="text:item.iPropsCurrent.width() ? item.iPropsCurrent.width() : '<property unused>'"></span><span
             data-bind="visible:item.iPropsCurrent.width">;</span>
-    height: <span
+  height: <span
             data-bind="text:item.iPropsCurrent.height() ? item.iPropsCurrent.height() : '<property unused>'"></span><span
             data-bind="visible:item.iPropsCurrent.height">;</span>
-    flex-grow: <span
+  flex-grow: <span
             data-bind="text:item.iPropsCurrent.flexGrow() ? item.iPropsCurrent.flexGrow() : '<property unused>'">null</span><span
             data-bind="visible:item.iPropsCurrent.flexGrow">;</span>
-    flex-shrink: <span
+  flex-shrink: <span
             data-bind="text:item.iPropsCurrent.flexShrink() ? item.iPropsCurrent.flexShrink() : '<property unused>'"></span><span
             data-bind="visible:item.iPropsCurrent.flexShrink">;</span>
-    flex-basis: <span
+  flex-basis: <span
             data-bind="text:item.iPropsCurrent.flexBasis() ? item.iPropsCurrent.flexBasis() : '<property unused>'"></span><span
             data-bind="visible:item.iPropsCurrent.flexBasis">;</span>
 }
-  </pre>
+</pre>
         </code>
     </div>
 
